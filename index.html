@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoolRent & Sell - Refrigerators</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    body {
+      padding-top: 1rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    figure img {
+      border-radius: 8px;
+    }
+    form button {
+      background-color: #0077cc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>CoolRent & Sell</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#appointment">Rent</a></li>
+      <li><a href="#subscribe" role="button">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <main class="container">
+    <div class="grid">
+      <section id="products">
+        <hgroup>
+          <h2>Available Refrigerators</h2>
+          <h3>Rent or Buy — Affordable and Reliable</h3>
+        </hgroup>
+        <p>Browse our selection of refrigerators for sale or rent. Flexible plans, high-quality products.</p>
+
+        <div class="product-grid">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1606813902772-8b9e89cbe7db?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Modern double-door fridge">
+            <figcaption><a href="#appointment">Double Door Fridge – Rent from $30/mo</a></figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e17b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Minimalist white fridge">
+            <figcaption><a href="#appointment">Compact Fridge – Rent from $15/mo</a></figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1617957741642-16e34eac12d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Luxury stainless steel fridge">
+            <figcaption><a href="#appointment">Stainless Steel Fridge – Rent from $40/mo</a></figcaption>
+          </figure>
+        </div>
+
+        <h3>Flexible Plans</h3>
+        <p>Choose monthly rentals, yearly plans, or buy directly. Our refrigerators are energy-efficient and reliable.</p>
+
+        <h3>Free Delivery & Installation</h3>
+        <p>We deliver and install refrigerators at your location free of charge within 48 hours of booking.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Appointment Form -->
+  <section id="appointment" aria-label="Appointment form">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Book a Rental Appointment</h2>
+          <h3>Fill out your details and we’ll get in touch</h3>
+        </hgroup>
+        <p>Click the button below to schedule your rental or purchase inquiry via our Google Form.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSch_favHPqD8P4L3aJ3s9pPBjoX4Sr39l8iXZaDY7Y9Hu6ijw/viewform?usp=header" target="_blank" role="button">Make Appointment</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Subscribe Section -->
+  <section id="subscribe" aria-label="Subscribe example">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Stay Updated</h2>
+          <h3>Get our latest offers and new arrivals</h3>
+        </hgroup>
+        <form class="grid">
+          <input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required>
+          <input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required>
+          <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+  </footer>
+</body>
+</html>
