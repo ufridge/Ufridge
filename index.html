@@ -47,10 +47,27 @@
         <p>Browse our selection of refrigerators for sale or rent. Flexible plans, high-quality products.</p>
 
         <div class="product-grid">
+          
           <figure>
-            <img src="images/fridge1.jpg" alt="Modern double-door fridge">
+            <img src="images/fridge1.jpg" 
+                alt="Modern double-door fridge" 
+                data-closed="images/fridge1.jpg" 
+                data-open="images/fridge1o.jpg" 
+                onclick="toggleFridge(this)" 
+                style="cursor:pointer; width:100%;">
             <figcaption><a href="#appointment">Double Door Fridge – Rent from $300/mo</a></figcaption>
           </figure>
+
+          <script>
+            function toggleFridge(img) {
+              if (img.src.includes(img.dataset.closed)) {
+                img.src = img.dataset.open;
+              } else {
+                img.src = img.dataset.closed;
+              }
+            }
+          </script>
+
           <figure>
             <img src="images/fridge2.jpg" alt="Minimalist white fridge">
             <figcaption><a href="#appointment">Compact Fridge – Rent from $400/mo</a></figcaption>
