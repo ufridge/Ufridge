@@ -13,6 +13,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
+      align-items: start; /* 每個格子從上方對齊 */
     }
     figure img {
       border-radius: 8px;
@@ -21,9 +22,14 @@
       background-color: #0077cc;
       color: white;
     }
+
+    /* 冰箱產品框架 */
     figure.fridge {
       position: relative;
       height: 420px; /* 整個框架固定高度 */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* 圖片在上，文字在底部 */
     }
 
     figure.fridge img {
@@ -33,14 +39,15 @@
       cursor: pointer;
       display: block;
       margin: 0 auto;
+      align-self: center;     /* 水平居中 */
+      margin-top: auto;
+      margin-bottom: auto;
     }
 
     figure.fridge figcaption {
-      position: absolute;
-      bottom: 0;   /* 固定在底部 */
-      left: 0;
-      right: 0;
       text-align: center;
+      margin-top: auto; /* 讓文字永遠在底部 */
+      padding-top: 0.5rem;
     }
   </style>
 </head>
@@ -68,37 +75,35 @@
         <p>Browse our selection of refrigerators for sale or rent. Flexible plans, high-quality products.</p>
 
         <div class="product-grid">
-          
-          <figure>
+          <figure class="fridge">
             <img src="images/fridge1.jpg" 
                 alt="Modern double-door fridge" 
-                data-closed="images/fridge1.jpg" 
-                data-open="images/fridge1o.jpg" 
-                onclick="toggleFridge(this)" 
-                style="cursor:pointer; width:100%;">
+                data-closed="fridge1.jpg" 
+                data-open="fridge1o.jpg" 
+                onclick="toggleFridge(this)">
             <figcaption><a href="#appointment">東元 小鮮綠 101L 冷藏冷凍 – 月租金 $300</a></figcaption>
           </figure>
 
-          <figure>
+          <figure class="fridge">
             <img src="images/fridge2.jpg" 
                 alt="Modern one-door fridge" 
-                data-closed="images/fridge2.jpg" 
-                data-open="images/fridge2o.jpg" 
-                onclick="toggleFridge(this)" 
+                data-closed="fridge2.jpg" 
+                data-open="fridge2o.jpg" 
+                onclick="toggleFridge(this)"> 
             <figcaption><a href="#appointment">東元 小鮮綠 50L – 月租金 $150</a></figcaption>
           </figure>
-
-          <script>
-            function toggleFridge(img) {
-              if (img.src.includes(img.dataset.closed)) {
-                img.src = img.dataset.open;
-              } else {
-                img.src = img.dataset.closed;
-              }
-            }
-          </script>
-        
         </div>
+
+        <script>
+          function toggleFridge(img) {
+            const currentFile = img.src.split("/").pop();
+            if (currentFile === img.dataset.closed) {
+              img.src = "images/" + img.dataset.open;
+            } else {
+              img.src = "images/" + img.dataset.closed;
+            }
+          }
+        </script>
 
         <h3>Flexible Plans</h3>
         <p>Choose monthly rentals, yearly plans, or buy directly. Our refrigerators are energy-efficient and reliable.</p>
