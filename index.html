@@ -55,7 +55,7 @@
                 data-open="images/fridge1o.jpg" 
                 onclick="toggleFridge(this)" 
                 style="cursor:pointer; width:100%;">
-            <figcaption><a href="#appointment">Double Door Fridge – Rent from $300/mo</a></figcaption>
+            <figcaption><a href="#appointment">東元 小鮮綠 101L 冷藏冷凍 – 月租金 $300</a></figcaption>
           </figure>
 
           <script>
@@ -69,13 +69,25 @@
           </script>
 
           <figure>
-            <img src="images/fridge2.jpg" alt="Minimalist white fridge">
-            <figcaption><a href="#appointment">Compact Fridge – Rent from $400/mo</a></figcaption>
+            <img src="images/fridge2.jpg" 
+                alt="Modern double-door fridge" 
+                data-closed="images/fridge2.jpg" 
+                data-open="images/fridge2o.jpg" 
+                onclick="toggleFridge(this)" 
+                style="cursor:pointer; width:100%;">
+            <figcaption><a href="#appointment">東元 小鮮綠 50L – 月租金 $150</a></figcaption>
           </figure>
-          <figure>
-            <img src="images/fridge3.jpg" alt="Luxury stainless steel fridge">
-            <figcaption><a href="#appointment">Stainless Steel Fridge – Rent from $500/mo</a></figcaption>
-          </figure>
+
+          <script>
+            function toggleFridge(img) {
+              if (img.src.includes(img.dataset.closed)) {
+                img.src = img.dataset.open;
+              } else {
+                img.src = img.dataset.closed;
+              }
+            }
+          </script>
+        
         </div>
 
         <h3>Flexible Plans</h3>
