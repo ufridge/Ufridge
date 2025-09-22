@@ -21,6 +21,27 @@
       background-color: #0077cc;
       color: white;
     }
+    figure.fridge {
+      position: relative;
+      height: 420px; /* 整個框架固定高度 */
+    }
+
+    figure.fridge img {
+      width: 100%;
+      max-height: 350px;   /* 最大高度，避免太高 */
+      object-fit: contain; /* 保持比例，不裁切 */
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figure.fridge figcaption {
+      position: absolute;
+      bottom: 0;   /* 固定在底部 */
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -58,23 +79,12 @@
             <figcaption><a href="#appointment">東元 小鮮綠 101L 冷藏冷凍 – 月租金 $300</a></figcaption>
           </figure>
 
-          <script>
-            function toggleFridge(img) {
-              if (img.src.includes(img.dataset.closed)) {
-                img.src = img.dataset.open;
-              } else {
-                img.src = img.dataset.closed;
-              }
-            }
-          </script>
-
           <figure>
             <img src="images/fridge2.jpg" 
-                alt="Modern double-door fridge" 
+                alt="Modern one-door fridge" 
                 data-closed="images/fridge2.jpg" 
                 data-open="images/fridge2o.jpg" 
                 onclick="toggleFridge(this)" 
-                style="cursor:pointer; width:100%;">
             <figcaption><a href="#appointment">東元 小鮮綠 50L – 月租金 $150</a></figcaption>
           </figure>
 
