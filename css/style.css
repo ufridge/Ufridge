@@ -1,0 +1,169 @@
+/* ============================== */
+/* 🧩 基本排版設定 */
+/* ============================== */
+body {
+    padding-top: 1rem;
+}
+form button {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* ============================== */
+/* 🧭 導覽列設計 */
+/* ============================== */
+nav.container-fluid {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+nav ul:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ============================== */
+/* ❄️ Hero 區塊（主視覺） */
+/* ============================== */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #E8F9FF 0%, #F3FFF9 100%), 
+                url('images/ice-pattern.svg') no-repeat center/cover;
+    background-blend-mode: soft-light;
+}
+.hero h1 {
+    color: #0077cc;
+    font-weight: 700;
+}
+.hero p {
+    color: #444;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+.cta-btn {
+    background-color: #4DB6E2;
+    color: white;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+}
+.cta-btn:hover {
+    background-color: #3CA4D0;
+}
+
+/* ============================== */
+/* 🧊 冰箱產品展示區 */
+/* ============================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+.product-grid figure {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-grid figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* 冰箱圖片與文字 */
+figure.fridge {
+    position: relative;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+figure.fridge img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+figure.fridge figcaption {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+figure.fridge img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+figure.fridge figcaption a:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+/* ============================== */
+/* 📦 各區背景分色 */
+/* ============================== */
+#products {
+    background: linear-gradient(180deg, #ffffff 0%, #f9fbfc 100%);
+    padding: 3rem 0;
+}
+#process {
+    background:
+    url('images/lines-pattern.svg') repeat,
+    linear-gradient(180deg, #f7f9fa 0%, #ffffff 100%);
+    background-size: 200px;
+    padding: 4rem 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    opacity: 0.98;
+}
+#appointment {
+    background: linear-gradient(135deg, #e0f7ff, #f4fffb);
+    border-top: 2px solid #cce7f0;
+    padding: 4rem 0;
+}
+#subscribe {
+    background: linear-gradient(135deg, #EAF9F2 0%, #F9FFFD 100%);
+    border-top: 1px solid #d6efe2;
+    padding: 4rem 0;
+}
+
+/* ============================== */
+/* 🧭 Logo 設計 */
+/* ============================== */
+.logo {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+/* ============================== */
+/* ⚙️ Footer */
+/* ============================== */
+footer.container {
+    margin-top: 3rem;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 1rem;
+    text-align: center;
+    color: #555;
+}
+footer.container a {
+    color: #0077cc;
+    text-decoration: none;
+}
+footer.container a:hover {
+    text-decoration: underline;
+}
