@@ -49,18 +49,40 @@
       margin-top: auto; /* 讓文字永遠在底部 */
       padding-top: 0.5rem;
     }
+    /* LOGO 設計 */
+    .logo {
+      height: 40px;       /* 控制 Logo 高度 */
+      width: auto;        /* 保持比例 */
+      vertical-align: middle;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul:first-child {
+      display: flex;
+      align-items: center;
+      gap: 10px;          /* logo 與文字的距離 */
+    }
   </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="container-fluid">
     <ul>
-      <li><strong>絕凍設備租賃</strong></li>
+      <li>
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="Ufridge Logo" class="logo">
+        </a>
+      </li>
+      <li><strong>Ufridge 冰箱租賃與銷售</strong></li>
     </ul>
     <ul>
-      <li><a href="#products">產品</a></li>
-      <li><a href="#appointment">預約</a></li>
-      <li><a href="#subscribe" role="button">訂閱</a></li>
+      <li><a href="#products">商品一覽</a></li>
+      <li><a href="#appointment">租借預約</a></li>
+      <li><a href="#subscribe" role="button">訂閱消息</a></li>
     </ul>
   </nav>
 
