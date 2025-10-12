@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <pattern id="lines" patternUnits="userSpaceOnUse" width="120" height="120">
+      <!-- 淡藍色斜線 -->
+      <path d="M0 120 L120 0" stroke="#cfeaf5" stroke-width="0.8" opacity="0.35" />
+      <path d="M-60 120 L60 0" stroke="#cfeaf5" stroke-width="0.8" opacity="0.35" />
+      <path d="M60 120 L180 0" stroke="#cfeaf5" stroke-width="0.8" opacity="0.35" />
+    </pattern>
+  </defs>
+  <rect width="120" height="120" fill="url(#lines)" />
+</svg>
