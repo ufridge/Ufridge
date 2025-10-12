@@ -35,7 +35,7 @@ nav ul:first-child {
     border-radius: 12px;
     margin-bottom: 3rem;
     background: linear-gradient(135deg, #E8F9FF 0%, #F3FFF9 100%), 
-                url('images/ice-pattern.svg') no-repeat center/cover;
+                url('../images/ice-pattern.svg') no-repeat center/cover;
     background-blend-mode: soft-light;
 }
 .hero h1 {
@@ -118,7 +118,7 @@ figure.fridge figcaption a:hover {
 }
 #process {
     background:
-    url('images/lines-pattern.svg') repeat,
+    url('../images/lines-pattern.svg') repeat,
     linear-gradient(180deg, #f7f9fa 0%, #ffffff 100%);
     background-size: 200px;
     padding: 4rem 0;
