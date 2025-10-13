@@ -153,6 +153,15 @@ figure.fridge figcaption a:hover {
     color: #0077cc;
     text-decoration: underline;
 }
+.info-banner {
+  background-color: #f4faff;
+  color: #0077cc;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
 
 /* ============================== */
 /* 📦 各區背景分色 */
@@ -278,8 +287,12 @@ footer.container a:hover {
 /* ============================== */
 /* 📱 浮動行動按鈕（Mobile CTA） */
 /* ============================== */
-@media (max-width: 768px) {
+.mobile-cta {
+  display: none; /*預設隱藏*/
+}
+@media screen and (max-width: 768px) {
   .mobile-cta {
+    display: block;
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -294,6 +307,7 @@ footer.container a:hover {
     z-index: 2000;
     text-decoration: none;
   }
+
   .mobile-cta:hover {
     background-color: #3CA4D0;
   }
