@@ -20,7 +20,7 @@
 ---
 
 ## 🧱 專案結構
-
+```text
 Ufridge/
 ├── index.html               # 首頁（商品瀏覽與租借入口）
 ├── product/
