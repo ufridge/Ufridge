@@ -20,7 +20,7 @@
 ---
 
 ## 🧱 專案結構
-```text
+<pre>
 Ufridge/
 ├── index.html               # 首頁（商品瀏覽與租借入口）
 ├── product/
@@ -43,7 +43,7 @@ Ufridge/
 │   └── ice-pattern.svg      # 背景紋理
 │
 └── README.md                # 專案說明文件
-
+</pre>
 ---
 
 ## 💡 使用方式
