@@ -34,8 +34,9 @@ nav ul:first-child {
     padding: 5rem 1rem;
     border-radius: 12px;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, #E8F9FF 0%, #F3FFF9 100%), 
-                url('../images/ice-pattern.svg') no-repeat center/cover;
+    background: 
+    url('../images/ice-pattern.svg') center/cover no-repeat,
+    linear-gradient(135deg, #E8F9FF 0%, #F3FFF9 100%);
     background-blend-mode: soft-light;
 }
 .hero h1 {
@@ -176,6 +177,9 @@ footer.container a:hover {
   /* 調整 Hero 區塊 */
   .hero {
     padding: 3rem 1.5rem;
+    background: 
+      url('../images/ice-pattern.svg') center/cover no-repeat,
+      linear-gradient(135deg, rgba(232,249,255,0.9) 0%, rgba(243,255,249,0.9) 100%);
   }
   .hero h1 {
     font-size: 1.6rem;
@@ -200,6 +204,17 @@ footer.container a:hover {
     font-size: 1rem;
   }
 
+  /* 導覽列精簡 */
+  nav.container-fluid {
+    padding: 0.4rem 0.8rem;
+  }
+  .logo {
+    height: 40px;
+  }
+  nav ul:first-child strong {
+    font-size: 0.95rem;
+  }
+
   /* 商品卡片改為一欄 */
   .product-grid {
     grid-template-columns: 1fr;
@@ -213,6 +228,9 @@ footer.container a:hover {
   }
 
   /* 租賃流程清單調整 */
+  #process {
+    padding: 2rem 1rem;
+  }
   #process ol {
     padding-left: 1.2rem;
     font-size: 1rem;
