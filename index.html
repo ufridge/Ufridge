@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ufridge - 冰箱租賃的好選擇</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <meta name="theme-color" content="#E8F9FF">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4DB6E2">
   <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
+
 <body>
   <!-- Navigation -->
   <nav class="container-fluid">
@@ -24,7 +27,7 @@
 
     <ul class="nav-right">
       <li><a href="#products">商品一覽</a></li>
-      <li><a href="#appointment" role="button">租借預約</a></li>
+      <li><a href="order.html" role="button">租借預約</a></li>
     </ul>
   </nav>
 
@@ -32,7 +35,7 @@
   <section class="hero">
     <h1>讓冰箱陪你度過每一個學期</h1>
     <p>Ufridge 提供實惠、乾淨、快速的冰箱租賃服務，讓生活更便利。</p>
-    <a href="#appointment" role="button" class="cta-btn">立即租借</a>
+    <a href="order.html" role="button" class="cta-btn">立即租借</a>
   </section>
 
   <!-- Main -->
@@ -46,12 +49,14 @@
 
         <div class="product-grid">
           <figure class="fridge">
-            <img src="images/fridge1.jpg" alt="Modern double-door fridge" data-closed="fridge1.jpg" data-open="fridge1o.jpg" onclick="toggleFridge(this)">
+            <img src="images/fridge1.jpg" alt="Modern double-door fridge" data-closed="fridge1.jpg"
+              data-open="fridge1o.jpg" onclick="toggleFridge(this)">
             <figcaption><a href="product/fridge1.html">東元 小鮮綠 93 / 101L 冷藏冷凍 – 月租金 $200 起</a></figcaption>
           </figure>
 
           <figure class="fridge">
-            <img src="images/fridge2.jpg" alt="Modern one-door fridge" data-closed="fridge2.jpg" data-open="fridge2o.jpg" onclick="toggleFridge(this)">
+            <img src="images/fridge2.jpg" alt="Modern one-door fridge" data-closed="fridge2.jpg"
+              data-open="fridge2o.jpg" onclick="toggleFridge(this)">
             <figcaption><a href="product/fridge2.html">東元 小鮮綠 50L – 月租金 $100 起</a></figcaption>
           </figure>
         </div>
@@ -81,10 +86,10 @@
       <article>
         <hgroup>
           <h2>下訂租賃服務</h2>
-          <h3>請詳細填寫相關資訊，我們收到後會盡快聯繫您</h3>
+          <h3>請填寫相關資訊，我們收到後會盡快聯繫您</h3>
         </hgroup>
-        <p>點按以下按鈕以前往預約表單</p>
-        <a href="https://forms.gle/a3ZJ5CqsZoXQM9bRA" target="_blank" role="button">預約</a>
+        <p>點按以下按鈕以前往預約頁面</p>
+        <a href="order.html" role="button">立即預約</a>
       </article>
     </div>
   </section>
@@ -109,13 +114,19 @@
   <!-- Footer -->
   <footer class="container">
     <small>
-      <a href="#">隱私權政策</a> • 
-      <a href="#">使用條款</a> • 
+      <a href="#">隱私權政策</a> •
+      <a href="#">使用條款</a> •
       聯絡我們：<a href="mailto:service@ufridge.com">service@ufridge.com</a>
     </small>
   </footer>
 
   <script src="js/script.js"></script>
-  <a href="#appointment" class="mobile-cta">立即租借</a>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+  <a href="order.html" class="mobile-cta">立即租借</a>
 </body>
+
 </html>

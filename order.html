@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ufridge - 租借預約</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4DB6E2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="container-fluid">
+        <div class="nav-left">
+            <a href="index.html" class="logo-link">
+                <img src="images/Mark.png" alt="Ufridge Logo" class="logo">
+            </a>
+            <div class="brand-text">
+                <strong>Ufridge</strong><br>
+                <span>冰箱租賃的好選擇</span>
+            </div>
+        </div>
+        <ul class="nav-right">
+            <li><a href="index.html#products">商品一覽</a></li>
+        </ul>
+    </nav>
+
+    <main class="container form-container">
+        <hgroup>
+            <h2>下訂租賃服務</h2>
+            <h3>請詳細填寫相關資訊，我們收到後會盡快聯繫您</h3>
+        </hgroup>
+
+        <div id="order-success" style="display: none;" class="success-message">
+            <h4>預約成功！</h4>
+            <p>我們已收到你的租賃需求，將在 24 小時內聯絡你。</p>
+            <a href="index.html" role="button" class="outline">回首頁</a>
+        </div>
+
+        <form id="order-form">
+            <!-- 1. Fridge model -->
+            <fieldset>
+                <legend>1. 冰箱型號</legend>
+                <label for="model-a" class="radio-label">
+                    <input type="radio" id="model-a" name="fridge-model" value="A 小鮮綠 93L / 101L" required>
+                    A 小鮮綠 93L / 101L
+                </label>
+                <label for="model-b" class="radio-label">
+                    <input type="radio" id="model-b" name="fridge-model" value="B 小鮮綠 50L">
+                    B 小鮮綠 50L
+                </label>
+            </fieldset>
+
+            <!-- 2. Rental duration -->
+            <fieldset>
+                <legend>2. 租賃時長</legend>
+                <label for="duration-3" class="radio-label">
+                    <input type="radio" id="duration-3" name="rental-duration" value="三個月" required>
+                    三個月
+                </label>
+                <label for="duration-6" class="radio-label">
+                    <input type="radio" id="duration-6" name="rental-duration" value="半年">
+                    半年
+                </label>
+                <label for="duration-12" class="radio-label">
+                    <input type="radio" id="duration-12" name="rental-duration" value="一年">
+                    一年
+                </label>
+                <label for="duration-other" class="radio-label">
+                    <input type="radio" id="duration-other" name="rental-duration" value="其他">
+                    其他
+                </label>
+            </fieldset>
+
+            <!-- 3. Dormitory -->
+            <label for="dormitory">3. 宿舍</label>
+            <select id="dormitory" name="dormitory" required class="large-select">
+                <option value="" disabled selected>請選擇宿舍</option>
+                <option value="男一">男一</option>
+                <option value="男二">男二</option>
+                <option value="男三">男三</option>
+                <option value="男四">男四</option>
+                <option value="男五">男五</option>
+                <option value="男六">男六</option>
+                <option value="男七">男七</option>
+                <option value="男八">男八</option>
+                <option value="大一女">大一女</option>
+                <option value="女一">女一</option>
+                <option value="女二">女二</option>
+                <option value="女三">女三</option>
+                <option value="女四">女四</option>
+                <option value="女五">女五</option>
+                <option value="女六">女六</option>
+                <option value="女八">女八</option>
+                <option value="女九">女九</option>
+                <option value="研一">研一</option>
+                <option value="研三">研三</option>
+                <option value="長興BOT">長興BOT</option>
+                <option value="水源BOT">水源BOT</option>
+                <option value="其他">其他</option>
+            </select>
+
+            <!-- 4. Room number -->
+            <label for="room-number">4. 房號</label>
+            <input type="text" id="room-number" name="room-number" placeholder="請輸入房號" required class="large-input">
+
+            <!-- 5. Name -->
+            <label for="name">5. 姓名</label>
+            <input type="text" id="name" name="name" placeholder="請輸入姓名" required class="large-input">
+
+            <!-- 6. LINE ID -->
+            <label for="line-id">6. LINE ID</label>
+            <input type="text" id="line-id" name="line-id" placeholder="請輸入 LINE ID" required class="large-input">
+
+            <!-- 7. Phone number -->
+            <label for="phone">7. 手機號碼</label>
+            <input type="tel" id="phone" name="phone" placeholder="請輸入手機號碼" required class="large-input">
+
+            <!-- 8. Payment method -->
+            <fieldset>
+                <legend>8. 付款方式</legend>
+                <label for="payment-deposit" class="radio-label">
+                    <input type="radio" id="payment-deposit" name="payment-method" value="訂金 20%" required>
+                    訂金 20%
+                </label>
+                <label for="payment-full" class="radio-label">
+                    <input type="radio" id="payment-full" name="payment-method" value="全額付款">
+                    全額付款
+                </label>
+            </fieldset>
+
+            <!-- 9. Notes -->
+            <label for="notes">9. 備註 (選填)</label>
+            <textarea id="notes" name="notes" placeholder="如有其他需求或問題，請在此填寫" rows="3" class="large-textarea"></textarea>
+
+            <button type="submit" class="submit-btn">立即預約</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container">
+        <small>
+            <a href="#">隱私權政策</a> •
+            <a href="#">使用條款</a> •
+            聯絡我們：<a href="mailto:service@ufridge.com">service@ufridge.com</a>
+        </small>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+
+</html>
