@@ -7,7 +7,7 @@ function toggleFridge(img) {
   }
 }
 // 📝 Order Form Logic
-const orderForm = document.getElementById('orderForm');
+const orderForm = document.getElementById('orderForm') || document.getElementById('order-form');
 const successMessage = document.getElementById('order-success');
 
 if (orderForm) {
