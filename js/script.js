@@ -43,7 +43,7 @@ if (orderForm) {
     };
 
     // 1. Improve form submission logic (fetch, POST, app/json)
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx7ozYYmWwm0VA7ZVwIolNl6v9SCjEVxxn6fVOECmgfIGipJKEpW87TU9ChJ4xtsFRiWA/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzo6dlSQ5i0_vqB5WsRupWvNJvzuSZwUA1LCi7631oGUeq2P6xHb-XTJDwbtZR--PIXoQ/exec';
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
