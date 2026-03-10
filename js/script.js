@@ -51,7 +51,7 @@ if (orderForm) {
     console.log('Submitting payload:', payload);
 
     const GOOGLE_SCRIPT_URL =
-      'https://script.google.com/macros/s/AKfycbzo6dlSQ5i0_vqB5WsRupWvNJvzuSZwUA1LCi7631oGUeq2P6xHb-XTJDwbtZR--PIXoQ/exec';
+      'https://script.google.com/macros/s/AKfycbyimD2sUx2zb32-94QuI2Yo52jgFME64YsaLNj-h_LeUP50kmuJQdJOFrk5Q-Q-xwDsHQ/exec';
 
     try {
       const response = await fetch(GOOGLE_SCRIPT_URL, {
