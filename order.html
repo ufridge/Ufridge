@@ -13,6 +13,11 @@
 </head>
 
 <body>
+    <script>
+        if (sessionStorage.getItem('agreementAccepted') !== 'true') {
+            window.location.href = 'agreement.html';
+        }
+    </script>
     <!-- Navigation -->
     <nav class="container-fluid">
         <div class="nav-left">
@@ -142,6 +147,11 @@
             <textarea id="notes" name="notes" placeholder="如有其他需求或問題，請在此填寫" rows="3" class="large-textarea"></textarea>
 
             <button type="submit" class="submit-btn">立即預約</button>
+
+            <!--Notice-->
+            <small>
+                <p style="color: red;">注意：請注意是否有看到畫面顯示「預約成功」，若沒有請使用下列 email 聯繫我們，非常感謝！</p>
+            </small>
         </form>
     </main>
 

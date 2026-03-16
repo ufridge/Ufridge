@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ufridge - 定型化契約同意</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4DB6E2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    .terms-box {
+      height: 400px;
+      overflow-y: scroll;
+      border: 1px solid var(--muted-border-color, #ccc);
+      border-radius: var(--border-radius, 4px);
+      padding: 1rem 1.25rem;
+      background: var(--card-background-color, #fff);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .terms-box h4 {
+      margin-top: 1.2rem;
+    }
+
+    .hint-text {
+      font-size: 0.85rem;
+      color: var(--muted-color, #888);
+      margin-bottom: 0.5rem;
+    }
+
+    .agreement-check-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+
+    .agreement-check-row label {
+      margin: 0;
+      cursor: pointer;
+    }
+
+    #agree-checkbox:disabled+label {
+      color: var(--muted-color, #aaa);
+      cursor: not-allowed;
+    }
+
+    #continue-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="container-fluid">
+    <div class="nav-left">
+      <a href="index.html" class="logo-link">
+        <img src="images/Mark.png" alt="Ufridge Logo" class="logo">
+      </a>
+      <div class="brand-text">
+        <strong>Ufridge</strong><br>
+        <span>冰箱租賃的好選擇</span>
+      </div>
+    </div>
+    <ul class="nav-right">
+      <li><a href="index.html#products">商品一覽</a></li>
+    </ul>
+  </nav>
+
+  <main class="container form-container">
+    <hgroup>
+      <h2>定型化契約</h2>
+      <h3>請仔細閱讀以下條款後繼續預約流程</h3>
+    </hgroup>
+
+    <div id="terms-box" class="terms-box" role="region" aria-label="定型化契約內容">
+      <h2>Ufridge 冰箱租賃服務條款</h2>
+
+      <h3>第一條　出租訂閱條件</h3>
+
+      <p>一、出租訂閱會員應為年滿十八歲且具完全行為能力之自然人。未滿十八歲者，應由其法定代理人代為或共同完成申請，否則本公司得拒絕提供本服務或逕行取消訂單。</p>
+
+      <p>二、出租訂閱會員於官網預約下單租用本服務任一方案時，應同時完整填寫線上合約申請資料，且線上合約申請人、付款人及官網會員原則上應為同一人。</p>
+
+      <p>會員完成租金、押金支付並提交線上合約申請後，仍須經本公司完成身分與資料確認及審核，並核可為「認證會員」者，該筆訂單始視為成立。</p>
+
+      <p>三、出租訂閱會員自「成功完成預約」起七十二（72）小時內未完成線上付款，或資料不完整者，本公司得經通知後取消訂單。（倘若有特殊狀況，請主動透過官方email與本公司聯繫）</p>
+
+      <p>四、認證會員審核條件原則上一組身分證字號僅得綁定一個會員帳號。本公司得依風險控管、信用狀況、訂單內容等因素要求補件或拒絕提供服務。</p>
+
+
+      <h3>第二條　出租訂閱商品內容物</h3>
+
+      <p>一、本服務所交付之租賃商品內容物，以商品頁面、訂單明細、出貨單或包裝清單為準。</p>
+
+      <p>二、本服務提供之商品可能為新品或複用品。複用品可能具有正常使用痕跡或細微刮痕，但不影響功能。</p>
+
+      <p>三、會員應妥善保管商品本體、配件、外箱與包材。</p>
+
+
+      <h3>第三條　出租訂閱期間</h3>
+
+      <p>一、本服務採出租訂閱制，依不同方案約定租期與計費方式。</p>
+
+      <p>二、租期自會員實際收到商品之翌日起算。</p>
+
+      <p>三、月付型方案每三十日為一個訂閱週期，並自動續扣。</p>
+
+
+      <h3>第四條　出租訂閱費用與押金</h3>
+
+      <p>一、各項租金、方案價格、物流費與優惠條件，以商品頁或結帳畫面為準。</p>
+
+      <p>二、會員於訂閱時應先支付所選方案費用。</p>
+
+      <p>三、部分商品需收取押金，押金金額以商品頁顯示為準。</p>
+
+
+      <h3>第五條　商品取得與返還</h3>
+
+      <p>一、商品下單後，除特殊商品外，約五個工作天內送達。</p>
+
+      <p>二、會員應於收到商品後立即檢查外觀與功能。</p>
+
+      <p>三、租期屆滿後應依本公司指定方式返還商品。</p>
+
+
+      <h3>第六條　使用服務注意事項</h3>
+
+      <p>一、租賃商品所有權均歸本公司所有，會員僅取得使用權。</p>
+
+      <p>二、會員不得轉租、出售、典當或非法使用商品。</p>
+
+      <p>三、會員應善盡保管責任。</p>
+
+
+      <h3>第七條　商品維修與更換</h3>
+
+      <p>一、商品故障應立即通知本公司。</p>
+
+      <p>二、本公司得依情況提供維修、換機或延長租期。</p>
+
+
+      <h3>第八條　權責歸屬</h3>
+
+      <p>一、租賃期間內商品毀損或遺失，會員應負賠償責任。</p>
+
+      <p>二、如商品遺失或無法返還，應依商品市價賠償。</p>
+
+
+      <h3>第九條　服務變更</h3>
+
+      <p>本公司得因系統維護、法令變更或營運需求調整服務內容。</p>
+
+
+      <h3>第十條　個人資料保護</h3>
+
+      <p>本公司依個人資料保護法規定蒐集、處理與利用會員資料。</p>
+
+
+      <h3>第十一條　準據法與管轄法院</h3>
+
+      <p>本條款以中華民國法律為準據法。</p>
+
+      <p>如有爭議，雙方同意以臺灣臺中地方法院為第一審管轄法院。</p>
+
+
+      <h3>第十二條　條款修訂</h3>
+
+      <p>本公司得隨時修訂本條款，並公告於網站。</p>
+
+
+      <h3>第十三條　出租人資訊</h3>
+
+      <p>
+        名稱：城際貿易有限公司<br>
+        負責人：王爵<br>
+        統一編號：60719939<br>
+        地址：臺北市萬華區中華路一段8樓<br>
+        電話：0987073013
+      </p>
+    </div>
+
+    <p class="hint-text" id="scroll-hint">請閱讀完整契約內容後才能勾選同意</p>
+
+    <div class="agreement-check-row">
+      <input type="checkbox" id="agree-checkbox" disabled>
+      <label for="agree-checkbox">我已閱讀並同意定型化契約</label>
+    </div>
+
+    <button id="continue-btn" disabled>繼續預約</button>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container">
+    <small>
+      <a href="#">隱私權政策</a> •
+      <a href="#">使用條款</a> •
+      聯絡我們：<a href="mailto:tchgarage2023@gmail.com">tchgarage2023@gmail.com</a>
+    </small>
+  </footer>
+
+  <script>
+    const termsBox = document.getElementById('terms-box');
+    const checkbox = document.getElementById('agree-checkbox');
+    const continueBtn = document.getElementById('continue-btn');
+    const scrollHint = document.getElementById('scroll-hint');
+
+    // Unlock checkbox once user scrolls to (near) the bottom
+    termsBox.addEventListener('scroll', function () {
+      const reachedBottom = termsBox.scrollTop + termsBox.clientHeight >= termsBox.scrollHeight - 10;
+      if (reachedBottom) {
+        checkbox.disabled = false;
+        scrollHint.textContent = '已閱讀完畢，請勾選同意以繼續';
+        scrollHint.style.color = 'var(--primary, #4DB6E2)';
+      }
+    });
+
+    // Enable continue button when checkbox is checked
+    checkbox.addEventListener('change', function () {
+      continueBtn.disabled = !checkbox.checked;
+    });
+
+    // Save flag and redirect
+    continueBtn.addEventListener('click', function () {
+      if (checkbox.checked) {
+        sessionStorage.setItem('agreementAccepted', 'true');
+        window.location.href = 'order.html';
+      }
+    });
+  </script>
+</body>
+
+</html>
