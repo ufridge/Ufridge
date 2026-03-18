@@ -130,3 +130,38 @@ footer.container {
     width: 90%;
   }
 }
+
+/* ============================== */
+/* 🌙 Dark Mode Overrides         */
+/* ============================== */
+@media (prefers-color-scheme: dark) {
+  .product-detail h2,
+  .description h3,
+  .pricing h3,
+  .price-card h4 {
+    color: #4DB6E2;
+  }
+
+  .product-detail .subtitle {
+    color: #aaa;
+  }
+
+  .description {
+    background: #111f2e;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  }
+
+  .price-card {
+    background: #1a1a2e;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  }
+
+  .price-card .price {
+    color: #eee;
+  }
+
+  footer.container {
+    color: #aaa;
+    border-top-color: #2a2a2a;
+  }
+}

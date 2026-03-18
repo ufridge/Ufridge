@@ -11,9 +11,20 @@ function toggleFridge(img) {
 const orderForm = document.getElementById('orderForm') || document.getElementById('order-form');
 const successMessage = document.getElementById('order-success');
 
+
 if (orderForm) {
   orderForm.addEventListener('submit', async function (event) {
     event.preventDefault();
+
+    // 0. Check legal checkbox
+    const legalCheckbox = document.getElementById('legal-checkbox');
+    const legalWarning = document.getElementById('legal-warning');
+    if (legalCheckbox && !legalCheckbox.checked) {
+      if (legalWarning) legalWarning.style.display = 'block';
+      legalCheckbox.focus();
+      return;
+    }
+    if (legalWarning) legalWarning.style.display = 'none';
 
     // 1. Validate required fields
     if (!orderForm.checkValidity()) {
