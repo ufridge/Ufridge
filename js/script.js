@@ -59,8 +59,6 @@ if (orderForm) {
       notes: formData.get('notes') || ''
     };
 
-    console.log('Submitting payload:', payload);
-
     const GOOGLE_SCRIPT_URL =
       'https://script.google.com/macros/s/AKfycbyimD2sUx2zb32-94QuI2Yo52jgFME64YsaLNj-h_LeUP50kmuJQdJOFrk5Q-Q-xwDsHQ/exec';
 
@@ -74,7 +72,6 @@ if (orderForm) {
       });
 
       const resultText = await response.text();
-      console.log('Raw response:', resultText);
 
       let result;
       try {
@@ -82,8 +79,6 @@ if (orderForm) {
       } catch (parseError) {
         throw new Error('後端回傳不是合法 JSON：' + resultText);
       }
-
-      console.log('Parsed response:', result);
 
       if (result.result !== 'success') {
         throw new Error(result.message || '後端未成功寫入資料');

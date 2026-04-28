@@ -54,8 +54,8 @@
                     <input type="radio" id="model-a" name="fridge-model" value="A 小鮮綠 93L / 101L" required>
                     A 小鮮綠 93L / 101L
                 </label>
-                <label for="model-b" class="radio-label">
-                    <input type="radio" id="model-b" name="fridge-model" value="B 小鮮綠 50L（試營運暫不提供）">
+                <label for="model-b" class="radio-label" style="opacity:0.45; cursor:not-allowed;">
+                    <input type="radio" id="model-b" name="fridge-model" value="B 小鮮綠 50L（試營運暫不提供）" disabled>
                     B 小鮮綠 50L（試營運暫不提供）
                 </label>
             </fieldset>
@@ -63,12 +63,12 @@
             <!-- 2. Rental duration -->
             <fieldset>
                 <legend>2. 租賃時長</legend>
-                <label for="duration-3" class="radio-label">
-                    <input type="radio" id="duration-3" name="rental-duration" value="三個月（暫不提供）" required>
+                <label for="duration-3" class="radio-label" style="opacity:0.45; cursor:not-allowed;">
+                    <input type="radio" id="duration-3" name="rental-duration" value="三個月（暫不提供）" disabled>
                     三個月（暫不提供）
                 </label>
-                <label for="duration-6" class="radio-label">
-                    <input type="radio" id="duration-6" name="rental-duration" value="半年（暫不提供）">
+                <label for="duration-6" class="radio-label" style="opacity:0.45; cursor:not-allowed;">
+                    <input type="radio" id="duration-6" name="rental-duration" value="半年（暫不提供）" disabled>
                     半年（暫不提供）
                 </label>
                 <label for="duration-12" class="radio-label">
@@ -127,7 +127,9 @@
 
             <!-- 7. Phone number -->
             <label for="phone">7. 手機號碼</label>
-            <input type="tel" id="phone" name="phone" placeholder="請輸入手機號碼" required class="large-input">
+            <input type="tel" id="phone" name="phone" placeholder="0912345678"
+              pattern="09\d{8}" title="請輸入有效的台灣手機號碼（09 開頭，共 10 碼）"
+              required class="large-input">
 
             <!-- 8. Payment method -->
             <fieldset>

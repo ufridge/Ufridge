@@ -185,11 +185,6 @@ figure.fridge figcaption a:hover {
     border-top: 2px solid #cce7f0;
     padding: 4rem 0;
 }
-#subscribe {
-    background: linear-gradient(135deg, #EAF9F2 0%, #F9FFFD 100%);
-    border-top: 1px solid #d6efe2;
-    padding: 4rem 0;
-}
 
 /* ============================== */
 /* ⚙️ Footer */
@@ -501,11 +496,6 @@ form legend {
     background: linear-gradient(135deg, #0d2233, #0d2a1e);
     border-top-color: #1a3a4a;
   }
-  #subscribe {
-    background: linear-gradient(135deg, #111f19 0%, #0d1a14 100%);
-    border-top-color: #1a3328;
-  }
-
   /* --- Product cards --- */
   .product-grid figure {
     background-color: #1e1e2e;
